@@ -1,12 +1,16 @@
+#include <Adafruit_HMC5883_U.h>
+
+//#include <Adafruit_HMC5883_U.h>
+
 #include <Wire.h>
-#include <HMC5883L.h>
+//#include <HMC5883L.h>
 
 int W = 11;
 int NW = 12;
 int N = 5;
 int NE = 6;
 int E = 7;
-int SE = 8;
+int SEast = 8;
 int S = 9;
 int SW = 10;
 
@@ -18,7 +22,7 @@ void turnOn(int port) {
     digitalWrite(N, LOW);
     digitalWrite(NE, LOW);
     digitalWrite(E, LOW);
-    digitalWrite(SE, LOW);
+    digitalWrite(SEast, LOW);
     digitalWrite(S, LOW);
     digitalWrite(SW, LOW);
 
@@ -38,7 +42,7 @@ void setup() {
     pinMode(N, OUTPUT);
     pinMode(NE, OUTPUT);
     pinMode(E, OUTPUT);
-    pinMode(SE, OUTPUT);
+    pinMode(SEast, OUTPUT);
     pinMode(S, OUTPUT);
     pinMode(SW, OUTPUT);
 }
